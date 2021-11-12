@@ -1,0 +1,307 @@
+@main: #0F171C;
+@text:#FFFFFF;
+@but:#E7E7E7;
+@orange: #E8A458;
+@font-face{
+	font-family: "ReemKufi";
+	src:url('../fonts/ReemKufi-Regular.ttf');
+}
+@font-face{
+	font-family: "Roboto";
+	src:url('../fonts/roboto-condensed.ttf');
+}
+.builder(@width, @display){
+	width:@width;
+	display: @display;
+}
+.fonts(@fam, @size){
+	font-family: @fam;
+	font-size: @size;
+}
+.content(@displ, @just){
+	display: @displ;
+	justify-content: @just;
+}
+.bg(@repeat, @size){
+	background-repeat:@repeat;
+	background-size:@size;
+}
+.blockTitle{
+	font-size: 27px;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    width:100%;
+    .content(flex,center);
+}
+
+.menu{
+			display: flex;
+			justify-content: space-between;
+			width:770px;
+			margin: 0;
+			li{
+				list-style: none;
+				
+				a{
+					text-decoration: none;
+					font-size:22px;
+					color:@text;
+					&:hover{
+						color: @orange;
+					}
+				}
+			}
+		}
+
+
+
+
+
+body{
+	margin: 0 auto;
+	padding:0;
+	font-family: "Roboto";
+	background: @main;
+	color:@text;
+
+	header{
+		.builder(100%, flex);
+		align-items:center;
+		flex-direction: column;
+		flex-wrap:wrap;
+		padding:60px 120px 0 120px;
+		box-sizing:border-box;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../images/banner.jpg');
+		background-size:cover;
+		background-position:center;
+
+		h2{
+			.fonts('ReemKufi',92px);
+			text-transform: uppercase;
+			margin: 250px 0 0px 0;
+			letter-spacing: 10px;
+
+		}
+		p{
+			font-size:27px;
+			 margin-top: 0;
+    		margin-bottom: 240px;
+		}
+	}
+	.main{
+		.firstBlock{
+			display: flex;
+   			justify-content: center;
+    		position: relative;
+    		box-sizing:border-box;
+    		padding:120px 120px;
+    		.leftImg{
+    			    width: 462px;
+    				height: 480px;
+    				background:orange;
+    				background-image: url('../images/secBl.jfif');
+    				background-size:cover;
+    				border-radius:195px;
+    				transform: rotate(-15deg);
+    				margin-right: 60px;
+
+    		}
+    		.rightContent{
+    			width: 400px;
+   				margin-top: 60px;
+    			display: flex;
+    			flex-direction: column;
+    			p{
+    				font-size: 18px;
+    			}
+    			.blockTitle{
+    					font-size: 27px;
+					    font-weight: bold;
+					    margin: 0 auto;
+					    margin-bottom: 60px;
+    			}
+    		}
+    		.leaf{
+    			position: absolute;
+			    z-index: -100;
+			    width: 450px;
+			    height: 656px;
+			    background: url(../images/leaf.png) no-repeat;
+			    top: -209px;
+			    right: 0;
+    		}
+		}
+		.grass{
+    		.builder(100%,flex);
+    		height: 168px;
+    		background: green;
+    		background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../images/basil.png');
+    		.bg(no-repeat,cover);
+
+
+		}
+		.catalog{
+			    padding: 120px 60px 0 120px;
+    			display: flex;
+   				flex-wrap: wrap;
+   				justify-content: center;
+   				.blockTitle.pizzaTitle{
+   					margin-right: 40px;
+   				}
+   				.card{
+   					padding:20px 0 20px 0;
+   					box-sizing:border-box;
+   					width: 307px;
+    				background: @text;
+    				margin-right: 60px;
+    				margin-bottom: 52px;
+    				border-radius: 8px;
+    				.content(flex, center);
+    				flex-wrap: wrap;
+    					img{
+    						
+    						margin-bottom: 6px;
+    					}
+    					.cardTitle{
+    						width:100%;
+    						color: black;
+    						.content(flex, center);
+    					}
+    					.pizzaDescription{
+    						color:black;
+							.content(flex, center);
+							flex-wrap:wrap;
+							margin-bottom: 20px;
+    					}
+    					select{
+    						width:266px;
+    						height:37px;
+    						border-radius:8px;
+    					}
+    					.button{
+    						padding:12px 70px 12px 70px;
+    						background: @but;
+							box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.25);
+							border-radius: 8px;
+							color: black;
+    						text-decoration: none;
+    						display: flex;
+    						justify-content: center;
+   							 align-items: center;
+   							box-sizing: border-box;
+   							margin-top: 20px;
+   								&:hover{
+   									color:@orange;
+   								}
+    					}
+   				}
+		}
+.catalog.sliderDrink{
+		position: relative;
+		padding: 120px 120px 120px 120px;
+			.card.biger{
+				width:1041px;
+				margin-right:0;
+
+			}
+
+	.sim-slider-arrow-left,	
+				.sim-slider-arrow-right {
+				  width: 22px;
+				  height: 40px;
+				  position: absolute;
+				  cursor: pointer;
+				  opacity: 0.6;
+				  z-index: 4;
+				}
+
+				.sim-slider-arrow-left {
+				  left: 10px;
+				  top: 45%;
+    			  left: 17%;
+				  background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+				}
+
+				.sim-slider-arrow-right {
+				  right: 10px;
+				  top: 45%;
+   				  right: 17%;
+				  background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+				}
+			}
+
+		.formSection{
+			background: #1A1B1C;
+			background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url('../images/contactus.jpg');
+			.bg(no-repeat, cover);
+			.content(flex,center);
+			box-sizing:border-box;
+			flex-wrap: wrap;
+			padding:120px 120px;
+			form{
+				    .content(flex,center);
+    				flex-wrap: wrap;
+			}
+			input{
+				width:690px;
+				height:60px;
+				margin-bottom: 20px;
+				border-radius:8px;
+				border:none;
+				text-indent: 20px;
+			}
+			input[type="submit"]{
+				color:@text;
+				background:black;
+				border:none;
+			}
+		}
+
+		.contactsSection{
+			.content(flex,center);
+			box-sizing:border-box;
+			flex-wrap: wrap;
+			padding:120px 120px;
+			iframe{
+				margin-right: 60px;
+			}
+			.rightCard_information{
+				width:395px;
+				height:364px;
+				background: @text;
+				color:black;
+				margin-top: 70px;
+    			box-sizing: border-box;
+    			padding: 45px 110px 0 88px;
+    				.callUs{
+    					font-size:24px;
+    				}
+    				p{
+    					font-size:18px;
+    				}
+			}
+		}
+	}
+		footer{
+			box-sizing:border-box;
+			padding:60px 120px 80px 120px;
+			background: black;
+			.content(flex,center);
+			flex-wrap:wrap;
+			.menu.footBl{
+				margin-bottom: 120px;
+				a{
+					font-size: 19px;
+				}
+			}
+			.footerInf{
+				width:100%;
+				.content(flex,space-between);
+				a{
+					color:@text;
+					text-decoration: none;
+				}
+			}
+		}
+}

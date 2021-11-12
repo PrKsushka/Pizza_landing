@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "ReemKufi";
+  src: url('../fonts/ReemKufi-Regular.ttf');
+}
+@font-face {
+  font-family: "Roboto";
+  src: url('../fonts/roboto-condensed.ttf');
+}
+.blockTitle {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 770px;
+  margin: 0;
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #ffffff;
+}
+.menu li a:hover {
+  color: #e8a458;
+}
+body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Roboto";
+  background: #0f171c;
+  color: #ffffff;
+}
+body header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 60px 120px 0 120px;
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+}
+body header h2 {
+  font-family: 'ReemKufi';
+  font-size: 92px;
+  text-transform: uppercase;
+  margin: 250px 0 0px 0;
+  letter-spacing: 10px;
+}
+body header p {
+  font-size: 27px;
+  margin-top: 0;
+  margin-bottom: 240px;
+}
+body .main .firstBlock {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  padding: 120px 120px;
+}
+body .main .firstBlock .leftImg {
+  width: 462px;
+  height: 480px;
+  background: orange;
+  background-image: url('../images/secBl.jfif');
+  background-size: cover;
+  border-radius: 195px;
+  transform: rotate(-15deg);
+  margin-right: 60px;
+}
+body .main .firstBlock .rightContent {
+  width: 400px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+body .main .firstBlock .rightContent p {
+  font-size: 18px;
+}
+body .main .firstBlock .rightContent .blockTitle {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+body .main .firstBlock .leaf {
+  position: absolute;
+  z-index: -100;
+  width: 450px;
+  height: 656px;
+  background: url(../images/leaf.png) no-repeat;
+  top: -209px;
+  right: 0;
+}
+body .main .grass {
+  width: 100%;
+  display: flex;
+  height: 168px;
+  background: green;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/basil.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body .main .catalog {
+  padding: 120px 60px 0 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .main .catalog .blockTitle.pizzaTitle {
+  margin-right: 40px;
+}
+body .main .catalog .card {
+  padding: 20px 0 20px 0;
+  box-sizing: border-box;
+  width: 307px;
+  background: #ffffff;
+  margin-right: 60px;
+  margin-bottom: 52px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .main .catalog .card img {
+  margin-bottom: 6px;
+}
+body .main .catalog .card .cardTitle {
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+body .main .catalog .card .pizzaDescription {
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+body .main .catalog .card select {
+  width: 266px;
+  height: 37px;
+  border-radius: 8px;
+}
+body .main .catalog .card .button {
+  padding: 12px 70px 12px 70px;
+  background: #e7e7e7;
+  box-shadow: -1px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+body .main .catalog .card .button:hover {
+  color: #e8a458;
+}
+body .main .catalog.sliderDrink {
+  position: relative;
+  padding: 120px 120px 120px 120px;
+}
+body .main .catalog.sliderDrink .card.biger {
+  width: 1041px;
+  margin-right: 0;
+}
+body .main .catalog.sliderDrink .sim-slider-arrow-left,
+body .main .catalog.sliderDrink .sim-slider-arrow-right {
+  width: 22px;
+  height: 40px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0.6;
+  z-index: 4;
+}
+body .main .catalog.sliderDrink .sim-slider-arrow-left {
+  left: 10px;
+  top: 45%;
+  left: 17%;
+  background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+}
+body .main .catalog.sliderDrink .sim-slider-arrow-right {
+  right: 10px;
+  top: 45%;
+  right: 17%;
+  background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+}
+body .main .formSection {
+  background: #1A1B1C;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/contactus.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  padding: 120px 120px;
+}
+body .main .formSection form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .main .formSection input {
+  width: 690px;
+  height: 60px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  text-indent: 20px;
+}
+body .main .formSection input[type="submit"] {
+  color: #ffffff;
+  background: black;
+  border: none;
+}
+body .main .contactsSection {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  padding: 120px 120px;
+}
+body .main .contactsSection iframe {
+  margin-right: 60px;
+}
+body .main .contactsSection .rightCard_information {
+  width: 395px;
+  height: 364px;
+  background: #ffffff;
+  color: black;
+  margin-top: 70px;
+  box-sizing: border-box;
+  padding: 45px 110px 0 88px;
+}
+body .main .contactsSection .rightCard_information .callUs {
+  font-size: 24px;
+}
+body .main .contactsSection .rightCard_information p {
+  font-size: 18px;
+}
+body footer {
+  box-sizing: border-box;
+  padding: 60px 120px 80px 120px;
+  background: black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body footer .menu.footBl {
+  margin-bottom: 120px;
+}
+body footer .menu.footBl a {
+  font-size: 19px;
+}
+body footer .footerInf {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+body footer .footerInf a {
+  color: #ffffff;
+  text-decoration: none;
+}
